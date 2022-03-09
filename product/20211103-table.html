@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>產品控制台</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				type: "GET",
+				url: "20211027-R.php",
+				dataType: "json",
+				async: false,
+				success: showdata,
+				error: function(){
+					alert("error-20211027-R.php");
+				}
+			});
+
+			$("#mytbody #update_btn").bind("click",function(){
+				$.mobile.changePage( "#p_update", { transition: "slideup", changeHash: false });
+				// this承上方敘述標籤
+				console.log($(this).data("id"));
+				console.log($(this).data("pname"));
+				console.log($(this).data("ctime"));
+
+				$("#pid").val($(this).data("id"));
+				$("#pname").val($(this).data("pname"));
+				$("#ptime").val($(this).data("ctime"));
+			});
+
+			$("#p_update_btn").bind("click", function(){
+				console.log($("#pid").val());
+				console.log($("#pname").val());
+				console.log($("#ptime").val());
+
+				// 將數據轉換成json格式
+				//ID需與後端相同
+				var jsonData = {};
+				jsonData["id"] = $("#pid").val();
+				jsonData["pname"] = $("#pname").val();
+
+				console.log(JSON.stringify(jsonData));
+
+				$.ajax({
+					type: "POST",
+					url: "20211103-U.php",
+					data:JSON.stringify(jsonData),
+					dataType: "json",
+					success: showdata_update,
+					error: function(){
+						alert("error20211103-U.php");
+					}
+
+				});
+			});
+
+		});
+
+		function showdata(data) {
+			console.log(data);
+			$("#mytbody").empty();
+			for(var i=0; i<data.length; i++) {
+				// data-後可以自己命名標籤，再代入參數即可變更，如data-id
+				var strHTML = '<tr><td>'+data[i].ID+'</td><td>'+data[i].Pname+'</td><td>'+data[i].Created_at+'</td><td><button id="update_btn" data-id="'+data[i].ID+'" data-pname="'+data[i].Pname+'" data-ctime="'+data[i].Created_at+'">更新</button><button>刪除</button></td></tr>';
+				$("#mytbody").append(strHTML);
+			}
+		}
+
+		function showdata_update(data){
+			console.log(data);
+			if(data.state){
+				alert(data.message);
+				location.href = "20211103-table.html";
+			}else{
+				alert(data.message);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="20211027-C.html" data-icon="star">產品建檔</a></li>
+					<li><a href="20211027-R.html" data-icon="star">產品列表</a></li>
+					<li><a href="20211103-table.html" data-icon="star" class="ui-btn-active">產品控制台</a></li>
+				</ul>
+			</div>
+			<h1>產品控制台</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<table data-role="table" class="ui-responsive table-stroke">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>產品名稱</th>
+						<th>建立時間</th>
+						<th>#</th>
+					</tr>
+				</thead>
+				<tbody id="mytbody">
+					<tr>
+						<td>001</td>
+						<td>咖啡奶茶</td>
+						<td>20211103</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h1>頁尾</h1>
+		</div>
+	</div>
+	<div data-role="page" id="p_update">
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<h1>商品更新</h1>
+		</div>
+		<!-- disabled為禁止更改 -->
+		<div role="main" class="ui-content">
+			<div data-role="fieldcontain">
+				<label for="pid">商品編號</label>
+				<input type="text" id="pid" name="pid" disabled="">	
+			</div>
+			<div data-role="fieldcontain">
+				<label for="pname">商品名稱</label>
+				<input type="text" id="pname" name="pname" placeholder="產品名稱字數限制2-10字！">
+			</div>
+			<div data-role="fieldcontain">
+				<label for="ptime">建立時間</label>
+				<input type="text" id="ptime" name="ptime" disabled="">	
+			</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#" data-theme="b" data-icon="delete" data-role="button">取消</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" data-theme="b" data-icon="check" data-role="button" id="p_update_btn">更新</a>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h1>頁尾</h1>
+		</div>
+	</div>
+</body>
+</html>

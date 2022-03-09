@@ -1,0 +1,32 @@
+:root{
+    --bound;
+}
+
+body{
+    background-color: rgb(173, 173, 218,0.5);
+    color: rgb(26, 26, 109);
+    font-family: 'Noto Serif TC', serif;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#box{
+    width: var(--bound);
+    height: var(--bound);
+    /* background-color: rgb(11, 11, 214); */
+    position: relative;
+}
+
+h1,h3,p{
+    text-align: center;
+}
+
+h3 a{
+    text-decoration: none;
+}
+
+h3 a:hover{
+    color: blue;
+}

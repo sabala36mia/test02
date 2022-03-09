@@ -1,0 +1,95 @@
+/* 背景顏色 */
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Serif TC', serif;
+}
+body{
+    background: #fffbd0 url(./img/bg.png) repeat-x left top/80px 100px;
+}
+
+/* 大標題 */
+h1{
+    font-size: 300%;
+    color: #ffffff;
+    background-color: #32689e;
+    width: 250px;
+    text-align: center;
+    border: #92bbbb 4px solid;
+    border-radius: 50%;
+    line-height: 1em;
+    padding: 20px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px 3px gray;
+    text-shadow: -2px -2px rgb(168,195, 211),
+                2px 2px rgb(59,23,160);
+    background: linear-gradient(to bottom,rgb(70, 66, 143),#2d557e,#4e6f90,#7ec0c0);
+    font-family: 'Caveat', cursive;
+}
+
+/* 次標題 */
+h2{
+    border: 2px dotted #6fbba6;
+    width: 250px;
+    border-left: 10px solid #d0e35b;
+    padding: 10px;
+    color: #447e6d;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* 內容區塊 */
+#content{
+    border: 1px solid #ff80ff;
+    background-color: #ffffff;
+    margin: 50px auto;
+    padding: 40px 80px;
+    width: 960px;
+    border-radius: 30px;
+}    
+
+/* 頁首，頁尾共同設定 */
+header,footer{
+    text-align: center;
+}
+
+/* 圖片設定 */
+.img{
+    width: 32%;
+    padding: 5px;
+    height: 250px;
+}
+
+/* 格線設定 */
+hr{
+    border: 1px dotted #6fbba6;
+    width: 95%;
+}
+
+/* 圖標設定 */
+.price::before{
+    content: url(./img/price01.png);
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.time::before{
+    content: url(./img/time.png);
+    vertical-align: middle;
+    margin: 3px;
+}
+.phone::before{
+    content: url(./img/phone01.png);
+    vertical-align: middle;
+    margin: 3px;
+}
+.location::before{
+    content: url(./img/location.png);
+    vertical-align: middle;
+    margin: 3px;
+}
+.text::before{
+    content: url(./img/rating.png);
+    vertical-align: middle;
+    margin: 3px;
+}

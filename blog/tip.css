@@ -1,0 +1,49 @@
+*{
+    background-color: bisque;
+    box-sizing: border-box;
+    font-family: 'Noto Serif TC', serif;
+}
+#content{
+    margin: 50px auto;
+    padding: 40px 80px;
+    width: 960px;
+}
+h1{
+    text-align: center;
+}
+
+.tip{
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+
+.tip th,.tip td{
+    border: 2px solid gray;
+    padding: 10px 20px;
+
+}
+
+.tip th{
+    width: 12em;
+    font-size: 20px;
+    text-align: center;
+    background-color: hsl(7, 100%, 85%);
+}
+
+.tip td{
+    background-color: hsl(6, 100%, 96%);
+    width: 750px;
+}
+
+.number{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+.tip caption{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+

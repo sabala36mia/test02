@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <style>
+    	body{
+    		background-color: #F0F0F0;
+    	}
+    	#line {
+        text-align:center;
+        width: 100px;
+        height: 40px;
+        position: relative;
+    	}
+
+	    #line:after {
+	        content: "";
+	        width: 0;
+	        height: 1px;
+	        background: #233F81;
+	        position: absolute;
+	        top: 100%;
+	        left: 50%;
+	        transition: all .5s;
+	    }
+
+	    #line:hover:after {
+	        left: 0%;
+	        width: 100%;
+	    }
+
+	    .banner{
+	    	background-image: url('img/bg03.png');
+	    	background-position: center;
+	    	height: 350px;
+	    }
+
+	    .bg-cover{
+	        background-repeat: no-repeat;
+	        background-attachment: fixed;
+    	}
+
+    	.p_img{
+	    		display: none;
+	    }
+	    .c_img{
+	    	border-radius: 20px;
+	    }
+
+	   	.logobox{
+	        position: absolute;
+	        top: 25%;
+	        left: 5%;
+	        border-radius: 5%;
+	    }
+
+
+    	@media screen and (max-width: 768px) {
+
+    		.banner{
+	    	background-image: url('img/bg04.png');
+	    	background-position: center center;
+	    	
+	    	}
+
+	    	.appimg{
+	    		padding: 5px;
+	    	}
+
+	    	.c_img{
+	    		display: none;
+	    	}
+
+	    	.p_img{
+	    		display: block;
+	    	}
+
+	        .logobox{
+	          position: absolute;
+	          top: 50%;
+	          left: 50%;
+	          transform: translate(-50%,-50%);
+	        }
+
+
+    	}
+    </style>
+
+    <title>Mia's Web</title>
+   </head>
+  <body>
+    <!-- ///////////////NavBar  START/////////////// -->
+    <section>
+    	<nav class="navbar navbar-expand-md navbar-light ncolor fixed-top">
+    	<div class="logobox">
+        	<a class="navbar-brand" href="index.html"><img src="img/logo01.png" alt="" style="height: 50px; margin-top: -20px"></a>
+    	</div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse mr-3" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a id="line" class="nav-link text-dark" href="index.html">HOME<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a id="line" class="nav-link text-dark" href="about.html">ABOUT ME</a>
+              </li>
+              <li class="nav-item">
+                <a id="line" class="nav-link text-dark" href="work.html">WORK</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0"></form>
+        </div>
+      </nav>
+    	
+    </section>
+    <!-- ///////////////NavBar  END/////////////// -->
+
+    <!-- ///////////////Banner  START/////////////// -->
+    	
+	<div class="banner">
+		<div class="display-1 p-5 text-white font-weight-bold"></div>
+	</div>
+  	<!-- ///////////////Banner  END/////////////// -->
+
+
+  	<!-- ///////////////LINK  START/////////////// -->
+  	<section>
+	  	<div class="container">
+	  		<h4 class="text-center font-weight-bold mt-3" style="color: #728AB2;font-size: 30px;">My Works</h4>
+	  		<div class="row mt-5 offset-1">
+	  			<div class="col-md-4">
+	  				<a href="onepage/index.html" target="_blank"><img class="w-75 c_img" src="img/w01-a.png" onmouseover="this.src=&#39; img/w01-b.png &#39;;" onmouseout="this.src=&#39; img/w01-a.png &#39;;" alt=""><img class="w-75 p_img" src="img/w01-b.png" alt=""></a>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<a href="officialweb/index.html" target="_blank"><img class="w-75 c_img" src="img/w02-a.png" onmouseover="this.src=&#39; img/w02-b.png &#39;;" onmouseout="this.src=&#39; img/w02-a.png &#39;;" alt=""><img class="w-75 p_img" src="img/w02-b.png" alt=""></a>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<a href="maskmap/index.html" target="_blank"><img class="w-75 c_img" src="img/w03-a.png" onmouseover="this.src=&#39; img/w03-2.png &#39;;" onmouseout="this.src=&#39; img/w03-a.png &#39;;" alt=""><img class="w-75 p_img" src="img/w03-2.png" alt=""></a>
+	  			</div>
+	  		</div>
+	  		<div class="row mt-3 offset-1 mb-3">
+	  			<div class="col-md-4">
+	  				<a href="game/index.html" target="_blank"><img class="w-75 c_img" src="img/w04-a.png" onmouseover="this.src=&#39; img/w04-b.png &#39;;" onmouseout="this.src=&#39; img/w04-a.png &#39;;" alt=""><img class="w-75 p_img" src="img/w04-b.png" alt=""></a>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<a href="blog/index.html" target="_blank"><img class="w-75 c_img" src="img/w05-a.png" onmouseover="this.src=&#39; img/w05-b.png &#39;;" onmouseout="this.src=&#39; img/w05-a.png &#39;;" alt=""><img class="w-75 p_img" src="img/w05-b.png" alt=""></a>
+	  			</div>
+	  			<div class="col-md-4">
+	  				<a href="product/20211027-C.html" target="_blank"><img class="w-75 c_img" src="img/w06-a.png" onmouseover="this.src=&#39; img/w06-b.png &#39;;" onmouseout="this.src=&#39; img/w06-a.png &#39;;" alt=""><img class="w-75 p_img" src="img/w06-b.png" alt=""></a>
+	  			</div>
+	  		</div>
+	  	</div>
+  	</section>
+  	<!-- ///////////////LINK  END/////////////// -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <script src="js/wow.min.js"></script>
+
+    <script>
+      new WOW().init();//初始化
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

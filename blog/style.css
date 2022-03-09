@@ -1,0 +1,199 @@
+/* 背景顏色 */
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Serif TC', serif;
+}
+
+body{
+    /* background-color:#fffbd0;
+    background-image: url(./img/bg.png);
+    background-repeat: repeat-x;
+    background-position: left top;
+    background-size: 100px 120px; */
+    background: #fffbd0 url(./img/bg.png) repeat-x left top/80px 100px;
+    /* size不能單獨寫，要跟位置一起寫(位置/size) */
+}
+
+/* 大標題 */
+h1{
+    font-size: 300%;
+    color: #ffffff;
+    background-color: #32689e;
+    width: 250px;
+    text-align: center;
+    border: #92bbbb 4px solid;
+    border-radius: 50%;
+    line-height: 1em;
+    padding: 20px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px 3px gray ;
+    /* 加上inset則變成內陰影 */
+    text-shadow: -2px -2px rgb(168, 195, 211),
+                2px 2px rgb(59, 23, 160);
+    background: linear-gradient(to bottom,rgb(70, 66, 143),#2d557e,#4e6f90,#7ec0c0);
+    font-family: 'Caveat', cursive;
+    
+}
+
+/* 次標題 */
+.h{
+    border: 1px dotted #6fbba6;
+    border-left: 10px solid #d0e35b;
+    /* border覆蓋屬性(後蓋掉前) */
+    padding: 10px;
+    color: #6fbba6;
+    margin-bottom: 25px;
+    border-radius: 20px;
+}
+ 
+/* section{
+    border: 1px solid #4bbbb9;
+    color: burlywood;
+    text-decoration: underline;
+    text-align: center;
+}  */
+
+/* 連結顏色 */
+a{
+    color: #00ff40;
+}
+
+a:link{
+    color: #004080;
+}
+
+a:visited{
+    color: #004080;
+}
+
+a:hover{
+    color: deeppink;
+    background-color: darksalmon;
+}
+a:active{
+    color: #ffff00;
+}
+
+/* 內容區塊 */
+#content{
+    border: 1px solid #ff80ff;
+    background-color: #ffffff;
+    margin: 50px auto;
+    padding: 40px 80px;
+    width: 960px;
+    border-radius: 30px;
+    /* 960-80-80-2=798 */
+    /* 上面box-sizing會自動幫你算成798 */
+}
+
+/* 超連結(更多介紹) */
+.more{
+    text-align: right;
+}
+
+/* 更多介紹的連結圖示 */
+.more::after{
+    content:url(./img/ico_arrow.png);
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+/* 小標題 */
+.h-sub span{
+    font-weight: normal;
+    color: rgb(189, 61, 189);
+}
+.h-sub{
+    border: 1px dotted #403e8f;
+    border-left: 10px solid #6ea9cc;
+    /* border覆蓋屬性(後蓋掉前) */
+    padding: 10px;
+    color: #000000;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+/* section之間的區塊分隔 */
+#content > section + section{
+    margin-top: 100px;
+}
+
+/* 頁首，導覽列，頁尾共同設定 */
+header,nav,footer{
+    text-align: center;
+}
+
+/* 個人連結圖示 */
+a[href^="mailto:"]::after{
+    content: url(/web/img/ico_mail.png);
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+a[href^="https://"]::after{
+    content: url(/web/img/ico_blank.png);
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+/* 導覽列設定 */
+.menu li{
+    list-style-type: none;
+    /*border: 1px solid #2d557e; */
+    display: inline-block;
+    width: 200px;
+    /* background-color: #539f85;
+    padding: 10px; */
+    margin: 0 10px;
+}
+
+.menu a{
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #30567c;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.menu a:hover{
+    /* color: white; */
+    background-color: #486a8d;
+}
+
+/* 文繞圖設定 */
+.imgl{
+    float: left;
+    margin-right: 30px;
+}
+.imgr{
+    float: right;
+    /* margin-left: 30px; */
+    margin: 0px 0px 10px 30px;
+    /* margin上右下左 */
+}
+.clear{
+    clear: both;
+}
+
+.clearfix::after{
+    content: " ";
+    display:block;
+    clear: both;
+}
+
+.radius{
+    border-radius: 20px;
+}
+
+/* top連結 */
+.top01{
+   text-align: center;
+}
+.top01::after{
+    content: url(./img/arrow-u-black.png);
+    vertical-align: middle;
+    margin: 5px;
+}

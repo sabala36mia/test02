@@ -1,0 +1,76 @@
+body {
+  background-color: blanchedalmond;
+  font-family: "Noto Serif TC", serif;
+}
+
+.title {
+  border: 1px dotted #6fbba6;
+  padding: 10px;
+  height: 500px;
+  width: 960px;
+  color: #6fbba6;
+  background-color: #c3d8d2;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+
+h1 {
+  display: block;
+  width: 300px;
+  height: 60px;
+  line-height: 50px;
+  background-color: #0f8172;
+  font-size: 45px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+p {
+  font-size: 20px;
+  color: #09574c;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 940px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  font-size: 1em;
+}
+
+input[type="text"]:focus {
+  background-color: #e8f0fd;
+  outline: none;
+  border-left: 3px solid #403e8f;
+}
+
+#myButton {
+  width: 200px;
+  padding: 10px;
+  margin: 0px 400px;
+  font-size: 20px;
+  color: #0f8172;
+  border-radius: 10px;
+  border: 2px solid #71b96e;
+  background-color: #ffffff;
+}
+
+#myButton:hover {
+  background-color: #c4c5fa;
+}
+
+h2 {
+  text-align: center;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #09574c;
+  font-size: 20px;
+}
+
+h2 a:hover {
+  color: rgb(204, 45, 45);
+}

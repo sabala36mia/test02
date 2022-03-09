@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    
+    <style>
+      body{
+        background-color: #FFF3EE;
+      }
+      #line {
+            text-align:center;
+            width: 100px;
+            height: 40px;
+            position: relative;
+      }
+
+      #line:after {
+          content: "";
+          width: 0;
+          height: 1px;
+          background: #233F81;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transition: all .5s;
+      }
+
+      #line:hover:after {
+          left: 0%;
+          width: 100%;
+      }
+
+      .ncolor{
+      background-color:#FFFFFF;
+      }
+
+      .topbox{
+        background-color: #E9D8BF;
+        height: 300px;
+      }
+      .photoimg{
+        height: 300px;
+        background-repeat: no-repeat;
+        margin-top: -50px;
+        -webkit-filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.4));   
+      }
+      .logobox{
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        border-radius: 5%;
+      } 
+
+      .title_text{
+        font-size:60px;
+        text-align:center;
+        line-height: 300px;
+
+      }
+      .infobox{
+        background-color: #C0FFEE;
+        margin-top: -100px;
+      }
+
+      .about01{
+          height: 90px;
+          width: 50px;
+          background-color: #FFD899;
+          margin-left: -20px;
+          border-radius: 15px;
+        }
+
+      .worktextbg{
+        background-color: #5CADAD;
+        padding: 10px;
+        border-radius: 15px;
+      }
+      .skillimg{
+        height: 300px;
+        width: 400px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 30px;
+        margin-left: 10px;     
+        margin-bottom: -200px;
+        padding-top: 10px;
+      }
+
+      .circle{
+        height: 120px;
+        width: 120px;
+        border-radius: 200px;
+        margin-top: 200px;
+        text-align:center;
+        line-height: 120px;
+      }
+      .circle01{
+        height: 120px;
+        width: 120px;
+        border-radius: 200px;
+        margin-top: 10px;
+        text-align:center;
+        line-height: 120px;
+      }
+      .circle02{
+        height: 120px;
+        width: 120px;
+        border-radius: 200px;
+        margin-top: 100px;
+        text-align:center;
+        line-height: 120px;
+      }
+      .s-textbg{
+        margin-top: 200px;
+        background-color: rgba(219, 219, 219, 0.3);
+        padding: 10px;
+        border-radius: 15px;
+      }
+      .s-textbg01{
+        margin-top: 100px;
+        background-color: rgba(219, 219, 219, 0.3);
+        padding: 10px;
+        border-radius: 15px;
+      }
+      .title_a01{
+        margin-bottom: -300px; 
+        margin-top: 150px; 
+        margin-left: 20px;
+      }
+
+      .title_a02{
+        margin-bottom: -300px; 
+        margin-top: 70px; 
+        margin-left: 20px;
+      }
+
+      .skill_circle{
+          margin-left: 10px;
+      }
+
+    @media screen and (max-width: 928px){
+      .logobox{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .about01{
+        display: none;
+      }
+
+      .p-info01{
+        display: block;
+        position: absolute;
+        margin-top: 45px;
+      }
+
+      .skillimg{
+        margin-left: 75px;
+        width: 75%;
+      }
+
+      .circle{
+      height: 100px;
+      width: 100px;
+      border-radius: 250px;
+      margin-top: 100px;
+      text-align:center;
+      line-height: 120px;
+      }
+
+      .circle01{
+      height: 100px;
+      width: 100px;
+      border-radius: 250px;
+      margin-top: 10px;
+      text-align:center;
+      line-height: 120px;
+      }
+
+      .s-textbg{
+      margin-top: 20px;
+      background-color: rgba(219, 219, 219, 0.3);
+      padding: 10px;
+      border-radius: 15px;
+      }
+
+      .s-textbg01{
+      margin-top: 20px;
+      background-color: rgba(219, 219, 219, 0.3);
+      padding: 10px;
+      border-radius: 15px;
+      }
+
+      .circle02{
+      height: 100px;
+      width: 100px;
+      border-radius: 100px;
+      margin-top: 50px;
+      text-align:center;
+      line-height: 120px;
+      }
+
+      .title_a01{
+      margin-bottom: -100px; 
+      margin-top: 50px;
+      margin-left: 20px;
+      }
+
+      .title_a02{
+      margin-bottom: -20px; 
+      margin-top: 70px; 
+      margin-left: 20px;
+      }
+
+      .skill_circle{
+        margin-left: -5px;
+      }
+
+      .skill_circle01{
+        margin-left: -20px;
+      }  
+    }
+    </style>
+
+	<title>Mia's Web - Work</title>
+  </head>
+  <body>
+    <!-- ///////////////NavBar  START/////////////// -->
+    <section>
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFF3EE;">
+        <div class="logobox">
+          <a class="navbar-brand" href="index.html"><img src="img/logo01.png" alt="" style="height: 50px; margin-top: -20px"></a>
+        </div>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0 mr-auto"></form>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a id="line" class="nav-link text-dark" href="index.html">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a id="line" class="nav-link text-dark" href="about.html">ABOUT ME</a>
+            </li>
+            <li class="nav-item">
+              <a id="line" class="nav-link text-dark" href="work.html">WORK</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0"></form>
+        </div>
+      </nav>
+    </section>
+    <!-- ///////////////NavBar  END/////////////// -->
+
+    <!-- ///////////////Banner  START/////////////// -->
+    <div>
+      <div class="col-12 topbox">
+        <div class="title_text text-white wow animate__ animate__flipInX animated" data-wow-duration="2s" style="position: relative; visibility: visible; animation-duration: 2s; animation-name: flipInX;-webkit-filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.4))">
+          ABOUT  ME.
+        </div>
+      </div>
+      <!-- 大頭貼 -->
+      <div class="text-center">
+        <div class="photoimg"><img src="img/p02.png" alt="" style="height:300px;"></div>
+      </div>
+    </div>
+    <!-- ///////////////Banner  END/////////////// -->
+
+    <!-- ///////////////ABOUT  START/////////////// -->
+    <div class="container">
+      <div class="infobox">
+        <div class="row">
+          <div class="about01 font-weight-bold p-1 mt-1 " style="font-size:18px; color: #B79F82;"><p>基本</p>資料</div>
+          <!-- -----個人資料(姓名+標籤)----- -->
+          <div class="p-5 text-dark font-weight-bold mt-1" style="font-size: 36px;">
+              <div class="d-flex">
+                梁雅婷
+                <div class="p-info01">
+                  <h5><span class="badge badge-warning mt-3 ml-5">#平易近人</span><span class="badge badge-success mt-3 ml-2">#合作合群</span><span class="badge badge-primary mt-3 ml-2">#樂觀積極</span></h5>
+                </div>
+                
+              </div>
+            
+          </div>
+        </div>
+      
+        <hr class="ml-2 mr-3">
+        <!-- -----基本聯絡方式----- -->
+        <div class="row">
+          <div class="text-dark ml-5 mt-3">
+            <p>生日年齡 | 88.06.05 (22歲)</p>
+            <p>最高學歷 | 嘉南藥理大學 - 餐旅管理系</p>
+            <p>進修學程 | 職訓局 - 跨平台網站設置與應用</p>
+            <p>聯絡信箱 | <a href="mailto:kiki19990605@gmail.com">kiki19990605@gmail.com</a></p>
+            <p>連絡電話 | <a href="tel:0978093694">0978093694</a></p>
+          </div>  
+        </div>
+
+      <!-- -----工作經歷(前言)----- -->
+        <hr class="ml-2 mr-3">
+        <div class="row mr-3">
+          <div class="about01 font-weight-bold p-1" style="font-size:18px; color: #B79F82;"><p>工作</p>經歷</div>
+          <div class="col-10 text-white ml-5 mt-3 mr-5 worktextbg">
+            曾任職銷售相關工作，喜歡與顧客接觸，分析並找出更好的方法銷售。
+            雖然非資訊相關科系畢業，但因家人的影響，對於程式設計有濃厚的興趣，所以參加職訓局課程，學習程式語言。
+            希望在未來能夠利用所學，除了精進自己，也同時為公司帶來更大的效益，設計出更符合人性的網頁或程式。</div>
+        </div>
+      <!-- -----工作經歷01----- -->
+        <div class="row">
+          <div class="text-dark ml-5 mt-3 mr-3">
+            <div class="row mt-3">
+              <div class="col-8 offset-1 ml-auto">
+                <h5>刮鬍刀銷售員</h5>
+                <h6>精英人力股份有限公司</h6>
+              </div>
+              <div class="col-4">
+                <span style="color: #5F5B5B; font-size: 12px;">2020.07 - 2020.08 & 2019.07 - 2019.08</span>
+                <p><span style="color: #5F5B5B; font-size: 12px;">2個月</span></p>
+                
+              </div>
+            </div>
+            
+
+            <div class="col-12">
+              <p></p>
+              <p>1. 依照公司標準，落實執行各項營運相關工作 ，包含店務/銷售/服務/陳列等。</p>
+              <p>2. 銷售管理-每月/每週/每日 業績目標 , 努力達成業績目標。</p>
+              <p>3. 人員管理-依百貨促銷/品牌活動/展演/拉櫃等全力配合排/調班。</p>
+              <p>4. 店頭管理-確實執行公司交辦事項。</p>
+              <p>5. 客戶關系維繫-紀錄顧客聯絡追蹤表並積極與顧客互動, 包含售後關懷電話/問候/優惠/新商品通知。</p>
+              <p>6. 帳務管理-每日專櫃銷售帳／百貨對帳單應當日核對正確, 有異常立即反應。</p>
+              <p>7. 庫存管理-盤差庫存責任擔當。</p>
+            </div>
+          </div>
+        </div>
+      <!-- -----工作經歷02----- -->
+        <hr class="ml-2 mr-3">
+        <div class="row">
+          <div class="text-dark ml-5 mt-3 mr-3">
+            <div class="row mt-3">
+              <div class="col-8 offset-1 ml-auto">
+                <h5>外場服務員</h5>
+                <h6>雅典娜之宴(牛排館)</h6>
+              </div>
+              <div class="col-4">
+                <span style="color: #5F5B5B; font-size: 12px;">2018.07 - 2018.08</span>
+                <p><span style="color: #5F5B5B; font-size: 12px;">1個月</span></p>
+                
+              </div>
+            </div>
+
+            <div class="col-12 mb-5">
+              <p></p>
+              <p>1. 負責客人帶位、倒水等工作，並於客人用餐完畢後，負責收拾碗盤與清理環境。</p>
+              <p>2. 負責全店的打掃與清理，時而進行環境布置。</p>
+            </div>
+          </div>
+        </div>
+      <!-- 自傳 -->
+        <hr class="ml-2 mr-3">
+        <div class="row mr-3">
+          <div class="about01 font-weight-bold p-1" style="font-size:18px; color: #B79F82;"><p>自<br><br>傳</p></div>
+          <div class="col-10 text-white ml-5 mt-3 mr-5 mb-4 worktextbg">
+            　　我是梁雅婷，個性隨和喜歡與人相處，在朋友眼中我是個對事物充滿好奇並喜歡變化，且是個有禮貌並會為他人著想的人。在學期間因善於規劃及安排時間，能同時兼顧課業、社團及工讀，高中時由於細心的個性被推舉擔任童軍團器材管理長，能依學員能力調配任務，並透過團隊合作共同完成工作。大學與組員一同製作專題報告時，即使遇到意見分歧，也能理性地提出自己的意見，並共同分析哪個是比較好的做法，最後統整出結果並報告。
+            <br><br>
+
+            　　曾在牛排館擔任外場服務員，總是以笑容回應並依顧客需求提供服務，使其能有賓至如歸的感受；亦在賣場擔任銷售員職務，主要負責推廣並銷售物品，銷售產品的過程中，會先了解產品特性而後設想主要客群，如何推銷並使顧客產生購買意願，即使會被拒絕，我也不會因此退縮，會想出另外的方法並執行。
+            <br><br>
+            　　大四時受到程式工程師哥哥的影響，使我想跨領域學習編譯網站等相關技能，並開始加選資訊相關課程，其中便有學到網站架構及編排，在學習的過程中產生濃厚興趣，並在畢業後直接參加職訓局辦理為期半年的「跨平台網站設置及應用」課程，且在班級中名列前茅。網站從無到有的編譯過程中，遇到問題我會主動發問，探索不同的技巧去應用在網頁上，並習得如何使用編譯器去架設網站(如：Sublime、VS Code)，學習新的語言，像是『HTML、CSS、、JavaScript、jQuery、PHP、Bootstrap』，使用 Apache學習資料庫連結，學習如何使用Photoshop及illustrator去製作並編輯影像，而最後的作品亦受到老師的肯定，並於近期取得「電腦軟體應用乙級」證照。
+            <br><br>
+            　　隨著科技不斷進展，全球化時代的變遷也十分迅速，我深信現代的工作不能墨守成規，應保持積極進取的企圖心，持續吸取新的知識與技能。貴公司力求突破與創新，同時鼓勵員工不斷進修，培訓計畫也非常完善，理念與我十分相似。深知自己還有進步空間，除了持續進修相關能力外，我期盼能進入貴公司，藉由過往的所學專業與熱忱能對公司有所貢獻，與貴公司一同創造全新價值。
+            感謝您百忙之中閱讀我的履歷，希望有機會可以加入貴公司的團隊！
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- -----專長介紹----- -->
+      <div class="skillbox" style="background-color: #99B1E4;">
+
+        <div class="skillimg wow animate__fadeInLeft" data-wow-duration="2s" style="position: relative; visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;"><img src="img/p03.png" alt=""></div>
+
+        <div class="halfbox mb-3" style="background-color: #99B1E4;">
+          <div class="row d-flex">
+            <div class="row col-lg-6 skill_circle mb-5">
+              <h4 class="text-white font-weight-bold title_a01">編譯語言</h4>
+                <div class="col-lg-12 d-flex">
+                  <div class="circle text-dark font-weight-bold" style="background-color: #FFFFFF;">HTML5</div>
+                  <div class="circle text-dark font-weight-bold ml-3" style="background-color: #FFD899;">CSS</div>
+                  <div class="circle text-dark font-weight-bold ml-3" style="background-color: #FFFFFF;">JavaScript</div>
+                </div>
+                <div class="col-lg-12 d-flex">
+                  <div class="circle01 text-dark font-weight-bold" style="background-color: #FFD899;">Bootstrap</div>
+                  <div class="circle01 text-dark font-weight-bold ml-3" style="background-color: #FFFFFF;">AJAX</div>
+                  <div class="circle01 text-dark font-weight-bold ml-3" style="background-color: #FFD899;">PHP</div>
+                </div>
+            </div>
+            <div class="row col-lg-6 mb-5">
+                <h4 class="text-white font-weight-bold title_a01">使用軟體</h4>
+                <div class="col-lg-12 d-flex">
+                  <div class="circle text-dark font-weight-bold" style="background-color: #FFFFFF;">VS Code</div>
+                  <div class="circle text-dark font-weight-bold ml-3" style="background-color: #FFD899;">Sublime</div>
+                  <div class="circle text-dark font-weight-bold ml-3" style="background-color: #FFFFFF;">Dreamweaver </div>
+                </div>
+                <div class="col-lg-12 d-flex">
+                  <div class="circle01 text-dark font-weight-bold" style="background-color: #FFD899;">Apache</div>
+                  <div class="circle01 text-dark font-weight-bold ml-3" style="background-color: #FFFFFF;">Photoshop</div>
+                  <div class="circle01 text-dark font-weight-bold ml-3" style="background-color: #FFD899;">illustrator</div>
+                </div>
+            </div>
+            
+          </div>
+        </div>   
+      </div> 
+    </div><!-- END -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script>
+      new WOW().init();//初始化
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

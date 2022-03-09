@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    
+    <style>
+    	body{
+        background-image: url('img/bg01.png');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .ncolor{
+        background-color: rgba(0, 0, 0, 0.0);
+      }
+      .logobox{
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        border-radius: 5%;
+      }
+
+      .text{
+        background-color: rgba(219, 219, 219, 0.3);
+        width: 450px;
+        height: 150px;
+        position: absolute;
+        top: 55%;
+        left: 5%;
+        color: #000;
+        text-align:center;
+        font-weight: bold;/*粗體字*/
+      }
+
+      .text .marker{
+        animation: flash 0.4s linear infinite;
+      }
+
+      #line {
+            text-align:center;
+            width: 100px;
+            height: 40px;
+            position: relative;
+        }
+
+        #line:after {
+            content: "";
+            width: 0;
+            height: 1px;
+            background: #233F81;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transition: all .5s;
+        }
+
+        #line:hover:after {
+            left: 0%;
+            width: 100%;
+        }
+
+
+      @keyframes flash {
+        from{
+          opacity: 0;/*透明度*/
+        }
+        to{
+           opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: 768px){
+
+        body{
+          background-image: url('img/bg02.png');
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
+
+        .logobox{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+    </style>
+
+	<title>Mia's Web</title>
+  </head>
+  <body>
+    <!-- ///////////////NavBar  START/////////////// -->
+    <section>
+      <nav class="navbar navbar-expand-lg navbar-dark ncolor">
+        <div class="logobox">
+          <a class="navbar-brand" href="index.html"><img src="img/logo01.png" alt="" style="height: 50px; margin-top: -20px"></a>
+        </div>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0 mr-auto"></form>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a id="line" class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a id="line" class="nav-link" href="about.html">ABOUT ME</a>
+            </li>
+            <li class="nav-item">
+              <a id="line" class="nav-link" href="work.html">WORK</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0"></form>
+        </div>
+      </nav>
+    </section>
+    <!-- ///////////////NavBar  END/////////////// -->
+
+    <!-- ///////////////Banner  START/////////////// -->
+        <!-- carousel-inner文字區塊 -->
+    <div class="text">
+      <div class="mt-3">
+        <span class="word text-capitalize">Hello，我是雅婷，<br>歡迎您蒞臨這個網站，這裡是我的小天地，<br>請您點擊下方的按鈕，前往瀏覽我的作品。</span>
+        <span class="marker">|</span>
+      </div>
+      <div class="section mt-3 my-3 wow animate__ animate__fadeInUp animated" data-wow-duration="3s" data-wow-delay="5s" style="position: relative; visibility: visible; animation-duration: 3s; animation-delay: 5s; animation-name: fadeInUp;">
+        <a href="work.html" class="btn text-white" style="background-color: #5FC3C5;">More</a>
+      </div>
+      
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script>
+      new WOW().init();//初始化
+
+      //製作打字機動畫
+      const word = document.querySelector('.word');
+      let str01 = 'Hello，我是雅婷，<br>歡迎您蒞臨這個網站，這裡是我的小天地，<br>請您點擊下方的按鈕，前往瀏覽我的作品。';
+      
+      // var startflag = false;
+      
+      //async await
+      //01.封裝一個函數 t
+      function setText(t){
+        return new Promise((resolve,reject) =>{
+          //設置定時器
+          setTimeout(() => {
+            word.innerHTML = t;
+            resolve();//成功的話
+          },100);
+        });
+
+      }
+      //02.聲明一個函數
+      async function main(){
+
+        for(let i = 1; i <= str01.length; i++){
+          await setText(str01.substr(0,i));
+        }
+
+      }
+
+
+      main();
+
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="GAVIN">
+    <meta name="robots" content="index,nofollow">
+    <link rel="stylesheet" href="./about.css">
+    <title>個人小檔案</title>
+</head>
+<body>
+    <header>
+        <h1><img src="./img/logo01.png" alt="" class="logo"></h1>
+    </header>
+    <main id="content">
+        <form action="123.html" method="GET">
+        <table class="about">
+            個人資訊<br>
+            姓　名：
+            <input type="text" name="username" required autofocus>
+            <br>
+            性　別：
+            <input type="radio" name="gander" value="male" id="male"><label for="male">男</label>
+            <input type="radio" name="gander" value="female" id="female"><label for="female">女</label>
+            <br>
+
+            最高學歷：
+            <select name="education" size="4" multiple required>
+                <option name="senior" >高中以下</option>
+                <option name="university" >大專院校</option>
+                <option name="master" >碩士</option>
+                <option name="doctor" >博士</option>
+            </select>
+            <br>
+
+            <p>其他資訊<br>
+            您喜歡下列哪些運動(可複選)?
+            <input type="checkbox" name="interest" value="read">閱讀
+            <input type="checkbox" name="interest" value="basketball">打球
+            <input type="checkbox" name="interest" value="shopping">逛街
+            <input type="checkbox" name="interest" value="music">聽音樂
+            <input type="checkbox" name="interest" value="water">水上運動
+            <input type="checkbox" name="interest" value="travel">旅行
+            <br>
+            您對於使用臉書經營社群有何看法?<br>
+            <textarea name="textarea" cols="50" rows="5">
+            </textarea></p>
+            <p><input type="submit" value="傳送資料">
+                <input type="reset" value="清除資料"></p>
+            </table>
+        </form>
+    </main>
+</body>
+<footer>
+
+</footer>
+</html>

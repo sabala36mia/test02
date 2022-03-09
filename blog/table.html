@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="GAVIN">
+    <meta name="robots" content="index,nofollow">
+    <link rel="stylesheet" href="./table.css">
+    <!-- 字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <!-- 字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap" rel="stylesheet">
+    <title>Mia's Web</title>
+</head>
+<body>
+    <header>
+        <h1>Mia's Web</h1>
+        <p>推薦你喜歡的美食吧！😍</p>
+    </header>
+
+<main id="content">
+    <form action="">
+        <p><strong>＊為必填項目。</strong></p>
+        
+        <table class="newtable">
+            <caption>美食資料</caption>
+            <tr>
+                <th>美食名稱*</th>
+                <td>
+                    <input type="text" name="food-name" required autofocus>
+                </td>
+            </tr>
+            <tr>
+                <th>店家名稱*</th>
+                <td>
+                    <input type="text" name="store-name" required>
+                </td>
+            </tr>
+            <tr>
+                <th>營業時間(開始)*</th>
+                <td>
+                    <input type="time" required>
+                </td>
+            </tr>
+            <tr>
+                <th>營業時間(結束)*</th>
+                <td>
+                    <input type="time" required>
+                </td>
+            </tr>
+            <tr>
+                <th>地址*</th>
+                <td>
+                    <input type="text" name="address" required>
+                </td>
+            </tr>
+            <tr>
+                <th>食物種類</th>
+                <td>
+                    <input type="checkbox" name="kind" value="rice" id="rice"><label for="rice">飯類</label>
+                    <input type="checkbox" name="kind" value="noodle" id="noodle"><label for="noodle">麵類</label>
+                    <input type="checkbox" name="kind" value="snack" id="snack"><label for="snack">點心</label>
+                    <input type="checkbox" name="kind" value="dessert" id="dessert"><label for="dessert">甜點</label>
+                    <input type="checkbox" value="drink" id="drink"><label for="drink">飲料</label>
+                    <input type="checkbox" value="other" id="other"><label for="other">其他</label>
+                </td>
+            </tr>
+            <tr>
+                <th>照片*</th>
+                <td>
+                    <input type="file" name="photo" required>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table class="newtable">
+            <caption>推薦人資料</caption>
+            <tr>
+                <th>姓名*</th>
+                <td>
+                    <input type="text" name="username" placeholder="請輸入姓名" required>✨可使用暱稱
+                </td>
+            </tr>
+            <tr>
+                <th>E-Mail*</th>
+                <td>
+                    <input type="email" name="email" placeholder="例：asd123@gmail.com" required>✨請輸入半形文字
+                </td>
+            </tr>
+            <tr>
+                <th>留言</th>
+                <td>
+                    <textarea name="textarea" cols="48" rows="5"></textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="btns">
+            <input type="reset" value="清除重填">
+            <input type="submit" value="送出">
+        </div>
+    </form>
+</main>
+
+<footer>
+    <p><small>Copyright © Mia's Web All Rights Reserved.</small></p>
+</footer>
+
+</body>
+</html>
